@@ -1,1 +1,179 @@
+<html>
 
+<head>
+    <title>Speed Reader App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="Index.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Lobster'rel='stylesheet'type='text/css'>
+    
+</head>
+
+<body>
+    <!--Page1-->
+    <div data-role="page" id="page1" data-theme="a">
+        <div data-role="header">
+
+        </div>
+        <div role="main" class="ui-content">
+            
+            <div class="header">
+                <h1>Speed Reader App</h1>
+                <p>For an efficient reading experience.</p>
+            </div>
+
+            <div id="controls">
+
+             <!--font-size and speed-->
+             <div class="ui-grid-a">
+                <div class="ui-block-a">
+                  <div>
+                   FONT SIZE:<span id="fontsize">50</span> px.
+                  </div>  
+
+            </div>
+            <div class="ui-block-b"> 
+            </div>
+                <span id="speed">300</span> WORDS PER MINUTES.
+             </div>
+
+             <!--font-size and speed-->
+             <div class="ui-grid-a">
+                <div class="ui-block-a">
+                  <form class="full-width-slider">
+                
+                    <input type="range" name="fontsizeslider"id="fontsizeslider" min="20" max="100" value="50"data-highlight="true">
+                  </form>  
+
+            </div>
+            <div class="ui-block-b">
+                <form class="full-width-slider">
+                
+                    <input type="range" name="speedslider" id="speedslider" min="50" max="600" value="300"data-highlight="true">
+                  </form>  
+
+            </div>
+
+             </div>
+
+             <!--Progress-->
+             <form class="full-width-slider">
+                <label for="progressslider">PROGRESS:<span id="percentage">0</span>%</label>
+                <input type="range" name="progressslider" id="progressslider" min="0" max="100" value="50"data-highlight="true">
+             </form>
+             </div>
+
+             <!--the read word-->
+             <div id="result">word</div>
+             
+            <!--error message-->
+            <div id="error">
+                Please Paste text in the box
+            </div>
+           
+             <!--User Input-->
+             <div id="inputs">
+                <textarea id="userInput"></textarea>
+                <!--buttons-->
+                <button id="start">Start Reading</button>
+                <button id="new">New</button>
+                <button id="pause">Pause</button>
+                <button id="resume">Resume</button>
+                <button id="voiceInput">Voice Text</button>
+             </div>
+             </div>
+        
+        
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page1" data-transition="pop" data-icon="home"class="ui-btn-active ui-state-persist">Home</a></li>
+                    <li><a href="#page2" data-transition="pop" data-icon="info">About</a></li>
+                    <li><a href="#page3" data-transition="pop" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!--page1-->
+    <!--Page2-->
+    <div data-role="page" id="page2" data-theme="a">
+        <div data-role="header">
+
+        </div>
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-filter="true">
+                <li data-role="list-divider">Information About This Site </li>
+                <li><a href=""><img src="founder history.jpg" class="ui-btn-active ui-state-persist">Founder details</a></li>
+                <li><a href=""><img src="founder history.jpg" class="ui-btn-active ui-state-persist">Founder information</a></li>
+                <li data-role="list-divider">Branches</li>
+                <li><a href=""><img src="founder history.jpg">
+                        <h1>India</h1>
+                        <p>Upcoming</p>
+                    </a></li>
+                <li><a href=""><img src="founder history.jpg">
+                        <h1>Usa</h1>
+                        <p>Upcoming</p>
+                    </a></li>
+                <li data-role="list-divider">Achievements</li>
+                <li><a href="">Upcoming</a></li>
+                <li><a href="">Upcoming</a></li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page1" data-transition="pop" data-icon="home">Home</a></li>
+
+                    <li><a href="#page2" data-transition="pop" data-icon="info"class="ui-btn-active ui-state-persist">About</a></li>
+
+                    <li><a href="#page3" data-transition="pop" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!--Page2-->
+    <!--Page3-->
+    <div data-role="page" id="page3" data-theme="a">
+        <div data-role="header">
+
+        </div>
+        <div role="main" class="ui-content">
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <a href="#" data-role="button">Email</a>
+                    <p>some text some text some text some text some text some text some text some text some text some
+                        text</p>
+                </div>
+                <div class="ui-block-b">
+                    <a href="#" data-role="button">live Chat</a>
+                    <p>some text some text some text some text some text some text some text some text some text some
+                        text</p>
+                </div>
+                <div class="ui-block-c">
+                    <a href="#" data-role="button">Phone</a>
+                    <p>some text some text some text some text some text some text some text some text some text some
+                        text</p>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#page1" data-transition="pop" data-icon="home">Home</a></li>
+                    <li><a href="#page2" data-transition="pop" data-icon="info">About</a></li>
+                    <li><a href="#page3" data-transition="pop" data-icon="mail"class="ui-btn-active ui-state-persist">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div><!--Page3-->
+    <script src="Index.js">
+
+
+
+    </script>
+</body>
+
+</html>
